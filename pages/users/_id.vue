@@ -24,10 +24,12 @@
 </template>
 
 <script>
+// *追記
+import Vue from 'vue'
 import { mapGetters } from 'vuex';
 
-
-export default {
+// *変更
+export default Vue.extend({
     head() {
         return {
             title: this.user.id
@@ -52,7 +54,7 @@ export default {
     },
     ...mapGetters(['users','userItems'])
   }
-} ;
+}) ;
 </script>
 
 <style scoped>

@@ -31,7 +31,11 @@
 </template>
 
 <script>
-export default {
+// *追記
+import Vue from 'vue'
+
+// *変更
+export default Vue.extend({
     async asyncData({ app }){
         const tag = ''
         const items = await app.$axios.$get(`https://qiita.com/api/v2/items?query=tag:${tag}`)
@@ -48,7 +52,7 @@ export default {
       }
     }
 
-}
+})
 </script>
 
 <style>
